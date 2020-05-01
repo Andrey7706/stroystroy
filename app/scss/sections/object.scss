@@ -1,0 +1,125 @@
+.object {
+    padding-top: 146px;
+    position: relative;
+    z-index: 20;
+
+    h2 {
+        line-height: 1.2;
+        background-repeat: no-repeat;
+        background-position: left 0;
+        padding-left: 33px;
+        margin-bottom: 25px;
+
+        .object_decor {
+            position: relative;
+
+            &:before {
+                content: "";
+                display: block;
+                width: 19px;
+                height: 136%;
+                position: absolute;
+                left: -33px;
+                top: 3px;
+                border: 3px solid #3a559f;
+                border-right-width: 0;
+            }
+        }
+    }
+}
+.object_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.object_left {
+    margin-bottom: 30px;
+}
+.object_text {
+    max-width: 545px;
+    padding-left: 33px;
+    @include Montserrat();
+    letter-spacing: -0.32px;
+    box-sizing: border-box;
+}
+.object_right {
+    max-width: 562px;
+    width: 100%;
+    position: relative;
+    margin-top: 44px;
+    margin-left: 63px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: 447px;
+        height: 294px;
+        border: 6px solid #3a559f;
+        position: absolute;
+        top: -43px;
+        right: -51px;
+        z-index: -1;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        width: 170px;
+        height: 112px;
+        border: 6px solid #3a559f;
+        position: absolute;
+        bottom: -40px;
+        left: -26px;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 1199px) {
+    .object {
+        padding-top: 70px;
+    }
+    .object_text {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .object {
+        padding-top: 40px;
+    }
+    .object_right {
+        margin-left: 0;
+
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .object_right {
+        margin-top: 0;
+
+        &:after {
+            display: none;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+    .object_left {
+        margin-bottom: 20px;
+    }
+}

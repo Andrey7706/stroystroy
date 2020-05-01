@@ -1,0 +1,168 @@
+.price {
+    background: url("../img/bg-price.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    box-sizing: border-box;
+    padding-top: 63px;
+    padding-bottom: 100px;
+    margin-top: -40px;
+
+    h2 {
+        line-height: 1.5;
+        background-repeat: no-repeat;
+        background-position: left 0;
+        padding-left: 33px;
+        color: $white;
+        margin-bottom: 28px;
+
+        span {
+
+            &.decor-2 {
+
+                &:before {
+                    height: 113%;
+                }
+            }
+        }
+    }
+}
+.price_wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.price_left {
+    max-width: 351px;
+    width: 100%;
+    background: url("../img/man.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    margin-left: 86px;
+    box-sizing: border-box;
+    margin-bottom: -100px;
+}
+.price_right {
+    max-width: 550px;
+    width: 100%;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+.price_right-desc {
+    color: $white;
+    font-weight: 400;
+    letter-spacing: -0.32px;
+}
+input[type="range"] {
+    width: 516px;
+}
+
+.irs--flat.irs-with-grid {
+    margin-top: 10px;
+    margin-bottom: 46px;
+}
+.irs--flat .irs-grid-text {
+   color: $white;
+    @include Bebas();
+    font-size: rem(16px);
+    font-weight: 400;
+}
+.irs--flat .irs-line {
+    height: 5px;
+    max-width: 100%;
+}
+.irs--flat .irs-grid {
+    height: 30px;
+}
+.irs-max, .irs-min {
+    display: none;
+}
+.irs--flat .irs-grid-pol {
+    background-color: #a9a9a9;
+    height: 13px;
+    width: 1px;
+
+    &.small {
+        height: 8px;
+    }
+}
+.irs--flat .irs-bar {
+    height: 5px;
+    background: #40559c;
+    box-shadow: none;
+}
+.irs--flat .irs-handle {
+    width: 21px;
+    height: 21px;
+    border-radius: 21px;
+    border: none;
+    box-shadow: 0 2px 1px rgba(155, 155, 155, 0.98), inset 0 2px 1px #ffffff;
+    background-color: #f1f1f1;
+    top: 16px;
+}
+.irs--flat .irs-handle>i:first-child {
+    background-color: transparent;
+}
+.irs--flat .irs-handle.state_hover>i:first-child, .irs--flat .irs-handle:hover>i:first-child {
+    background-color: transparent;
+}
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+    color: $black;
+    font-size: rem(26px);
+    @include Bebas(bold);
+    text-shadow: none;
+    padding: 1px 5px;
+    background-color: $white;
+    border-radius: 4px;
+    top: -26px;
+    letter-spacing: -0.65px;
+}
+.irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before {
+    position: absolute;
+    display: block;
+    content: "";
+    bottom: -14px;
+    margin-left: -6px;
+    overflow: hidden;
+    border: 7px solid transparent;
+    border-top-color: $white;
+}
+.irs--flat .irs-single {
+
+    span {
+        font-size: rem(18px);
+        font-weight: 400;
+        letter-spacing: -0.45px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .price {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .price {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .price_left {
+        display: none;
+    }
+    .price_right {
+        margin: 0 auto;
+        padding-top: 0;
+
+        .button {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .price {
+        margin-top: 30px;
+    }
+}

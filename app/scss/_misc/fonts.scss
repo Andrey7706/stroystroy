@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Regular.woff') format('woff'),
+    url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat Semibold';
+    src: url('../fonts/Montserrat-SemiBold.eot');
+    src: url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+    url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Regular';
+    src: url('../fonts/BebasNeueRegular.eot');
+    src: url('../fonts/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BebasNeueRegular.woff') format('woff'),
+    url('../fonts/BebasNeueRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Bold';
+    src: url('../fonts/BebasNeueBold.eot');
+    src: url('../fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/BebasNeueBold.woff') format('woff'),
+    url('../fonts/BebasNeueBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@mixin Montserrat($style: regular) {
+    @if $style == regular {
+        font-family: 'Montserrat Regular';
+    }
+    @if $style == semibold {
+        font-family: 'Montserrat Semibold';
+    }
+}
+
+@mixin Bebas($style: regular) {
+    @if $style == regular {
+        font-family: 'Bebas Neue Regular';
+    }
+    @if $style == bold {
+        font-family: 'Bebas Neue Bold';
+    }
+}
+
+
